@@ -1,4 +1,4 @@
-# Support Vector Machine (SVM)
+# Support Vector Machine
 
 # Importing the libraries
 import numpy as np
@@ -20,10 +20,14 @@ sc = StandardScaler()
 X_train = sc.fit_transform(X_train)
 X_test = sc.transform(X_test)
 
-# Training the SVM model on the Training set
+# Fitting classifier to the Training Set
+# Create your Classifier here
 from sklearn.svm import SVC
 classifier = SVC(kernel = 'linear', random_state = 0)
 classifier.fit(X_train, y_train)
+
+# Predicting a new result
+print(classifier.predict(sc.transform([[22, 67000]])))
 
 # Predicting the Test set results
 y_pred = classifier.predict(X_test)
