@@ -23,7 +23,7 @@ X_test = sc.transform(X_test)
 # Training the Naive Bayes model on the Training set
 from sklearn.naive_bayes import GaussianNB
 classifier = GaussianNB()
-classifier.fit(X_train, y_train)
+classifier.fit(X_train,y_train)
 
 # Predicting the Test set results
 y_pred = classifier.predict(X_test)
