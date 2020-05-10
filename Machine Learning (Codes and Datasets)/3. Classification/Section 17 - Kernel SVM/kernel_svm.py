@@ -20,10 +20,11 @@ sc = StandardScaler()
 X_train = sc.fit_transform(X_train)
 X_test = sc.transform(X_test)
 
-# Training the Kernel SVM model on the Training set
+# Fitting classifier to the Training Set
+# Create your Classifier here
 from sklearn.svm import SVC
 classifier = SVC(kernel = 'rbf', random_state = 0)
-classifier.fit(X_train, y_train)
+classifier.fit(X_train,y_train)
 
 # Predicting the Test set results
 y_pred = classifier.predict(X_test)
